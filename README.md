@@ -1,6 +1,6 @@
 # smartbin
 
-A new Flutter project.
+Smart bin is an IoT product that can convert a simple “dumb” garbage can or container and can make it “smart”. The product can monitor garbage levels, has vision recognition for recognizing items thrown into the garbage bin and adding them to a todo list, can monitor your garbage habbits etc… It is a hardware module that attaches to the garbage bin and can connect to and communicate over the internet to communicate with it’s complementary app, the smart bin app (SBA). The user can use the SBA to communicate and interact with the smart bin module.
 
 ## Getting Started
 
