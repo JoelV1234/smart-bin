@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartbin/globals/colors.dart';
+import 'package:smartbin/widgets/add_todo_dialog_widget.dart';
 import 'package:smartbin/widgets/app_page.dart';
+import 'package:smartbin/widgets/todo_list_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,8 +17,8 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final tabs = [
-      Container(),
-      Container(),
+      const TodoListWidget(completedScreen: false),
+      const TodoListWidget(completedScreen: true),
     ];
 
     return AppPage(
@@ -46,7 +48,11 @@ class HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.circular(20),
         ),
         backgroundColor: Colors.green,
-        onPressed: () {},
+        onPressed: () => showDialog(
+          context: context,
+          builder: (context) => const AddTodoDialogWidget(),
+          barrierDismissible: false,
+        ),
         child: const Icon(Icons.add),
       ),
     );

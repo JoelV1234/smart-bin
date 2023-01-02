@@ -18,6 +18,7 @@ class AppPage extends Scaffold {
     this.floatingActionButton,
     this.customBottomNavigationBar,
   }) : super(
+  
     key: key,
     bottomNavigationBar: customBottomNavigationBar,
     appBar: AppBar(
