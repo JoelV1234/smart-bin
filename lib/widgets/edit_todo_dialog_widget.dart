@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:smartbin/models/todo.dart';
 import 'package:smartbin/providers/todos_provider.dart';
 import 'package:smartbin/utils.dart';
-import 'package:smartbin/widgets/dialog_button.dart';
 import 'package:smartbin/widgets/dialog_close_button.dart';
 import 'package:smartbin/widgets/todo_form_widget/todo_form_widget.dart';
 
@@ -46,7 +45,7 @@ class EditTodoDialogWidgetState extends State<EditTodoDialogWidget> {
   void deleteTodo() {
     provider.removeTodo(widget.todo);
     Navigator.of(context).pop();
-    Utils.showSnackBar(context, 'Deleted this todo');
+    Utils.showSnackBar(context, 'Deleted the task');
   }
 
   @override
@@ -60,7 +59,11 @@ class EditTodoDialogWidgetState extends State<EditTodoDialogWidget> {
               DialogCloseButton(
                 title: 'Add Todo',
                 actions: [
-                  IconButton(onPressed: deleteTodo, icon: const Icon(Icons.delete))
+                  IconButton(
+                    splashRadius: 20,
+                    onPressed: deleteTodo, 
+                    icon: const Icon(Icons.delete)
+                  )
                 ],
               ),
               const SizedBox(height: 8),

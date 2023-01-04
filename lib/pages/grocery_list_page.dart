@@ -4,14 +4,14 @@ import 'package:smartbin/widgets/add_todo_dialog_widget.dart';
 import 'package:smartbin/widgets/app_page.dart';
 import 'package:smartbin/widgets/todo_list_widget.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class GroceryListPage extends StatefulWidget {
+  const GroceryListPage({Key? key}) : super(key: key);
   
   @override
-  HomePageState createState() => HomePageState();
+  GroceryListPageState createState() => GroceryListPageState();
 }
 
-class HomePageState extends State<HomePage> {
+class GroceryListPageState extends State<GroceryListPage> {
   int selectedIndex = 0;
 
   @override
